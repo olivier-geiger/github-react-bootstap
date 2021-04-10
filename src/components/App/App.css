@@ -1,0 +1,7 @@
+.App {
+  background: rgb(182, 179, 179);
+  width: 80vw;
+  max-width: 800px;
+  min-height: 100vh;
+  margin: 0 auto;
+}
