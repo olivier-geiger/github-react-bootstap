@@ -59,26 +59,28 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Header />
-        <Nav />
-        <Route path="/" exact >
-          <Form 
-            search={search}
-            setSearch={setSearch}
-            doSubmit={launchSearch}
-            errorEmpty={errorEmpty}
-            errorLength={errorLength}
-          />
-        {
-          loading && 
-          <Message message={counter} />
-        }
-        {
-          loading  &&  
-          <Repos repos={repos}/>
-        }
-        </Route>
-        <ToastContainer />
+        <Switch>
+          <Header />
+          <Nav />
+          <Route path="/" exact >
+            <Form 
+              search={search}
+              setSearch={setSearch}
+              doSubmit={launchSearch}
+              errorEmpty={errorEmpty}
+              errorLength={errorLength}
+              />
+          {
+            loading && 
+            <Message message={counter} />
+          }
+          {
+            loading  &&  
+            <Repos repos={repos}/>
+          }
+          </Route>
+          <ToastContainer />
+        </Switch>
       </Router>
     </div>
   );
